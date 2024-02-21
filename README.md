@@ -1,12 +1,11 @@
 # Olá bem vindo ao meu projeto de portifólio.
 ##Ferramentas utilizadas:
 
-*HTML
-*CSS
-*Flex-box
-##Feito por:
-
+* HTML
+* CSS
+* Flex-box
+## Feito por:
 ### Regiane Cunha
-###LinKedin:
+### LinKedin:
 https://www.linkedin.com/in/cunharegianedev/
 
