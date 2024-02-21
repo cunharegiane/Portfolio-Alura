@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:wght@400;600&display=swap');
+:root{
+    --cor-primaria: #000000;
+    --cor-segundaria: #22D4FD;
+    --cor-terciaria: #F6F6F6;
+    --cor-hover:#272727;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    /*Está resetando as configurações de margem e padding da página deixando sem espaçamento  */
+}
+
+body{
+    background-color: var(--cor-primaria);
+    color: var(--cor-terciaria);
+    /* height: 100vh; foi retirado, pois como estava adicionando mais e mais elementos não há a necessidade de usar 100% da tela
+    vh significa altura da viewport, isso significa que todo conteúdo inserido no body vai ocupar todo o corpo da página */
+
+    box-sizing: border-box; /* essa propriedade permite que os elementos filhos sempre estejam dentro do elementos pai, ou seja, quando adicionar 
+    uma imagem ou algum elemento pra que ela não ultrapasse o corpo da tela essa propriedade mantém elas todas dentro */
+
+    /*box-sizing é responsável por como altura e largura totais de um elemento são calculadas*/
+} 
+.cabecalho{
+    padding: 2% 0% 0% 15% ;  
+    
+}
+.cabecalho__menu{
+    display: flex;
+    gap: 80px;
+}
+.cabecalho__menu__link{
+    text-decoration: none;
+    color: var(--cor-segundaria);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 1.5rem;
+    
+
+    
+}
+.titulo{ /* .titulo está mudando a cor de uma strong que recebeu a class= "titulo", em outras palavras está estilizando apenas a strong que tem essa class*/
+    color: var(--cor-segundaria);
+}
+.apresentacao{
+    margin: 5% 15%;
+    display: flex; /*isso permite que os itens tenham uma determinada proporcionalidade de acordo com cada dispositivos, permitindo assim certa flexibilidade no layout*/
+    align-items: center;
+    justify-content: space-between;
+    gap: 82px;
+    
+    /*Flexbox permite que os elementos se ajustem a diferentes tamanhos de telas*/
+}
+.apresentacao__conteudo{
+    width: 615px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    
+}
+.apresentacao__conteudo__titulo{
+    font-size: 2.25rem;
+    font-family:'Krona One', sans-serif;
+}
+.apresentacao__conteudo__paragrafo{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5rem;   
+}
+.apresentacao__links{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 32px;
+    
+}
+.apresentacao__links__subtitulo{
+    font-family: 'Krona One', sans-serif;
+    font-family: 40px;
+    font-weight: 400;
+    
+ } /*  Ctrl + C + K  atalho para adicionar comentário em css */
+.apresentacao__links__link{
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    background-color:var(--cor-primaria);
+    width: 378px;
+    text-align: center;
+    border: 2px solid var(--cor-segundaria);
+    border-radius: 8px;
+    padding: 21.5px 0;
+    text-decoration: none;
+    color: var(--cor-terciaria);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 1.5rem;
+    
+    
+}
+.apresentacao__links__link:hover{
+    background-color: var(--cor-hover);
+    padding: 4%;
+    cursor: pointer;
+    
+}
+.rodape{
+    background-color: var(--cor-segundaria);
+    color:var(--cor-primaria);
+    width: 1920px;
+    padding: 23.69px;
+    text-align: center;
+    font-family:'Montserrat', sans-serif ;
+    font-size: 1.5rem;
+}
+
+@media (max-width: 1200px){
+    .apresentacao{
+        flex-direction: column-reverse;
+        padding: 5%;
+        justify-content: center;
+    }
+    .apresentacao__conteudo{
+        width: auto;
+    }
+    .cabecalho{
+        padding: 10%;
+    }
+    .cabecalho__menu{
+        justify-content: center;
+    }
+    .rodape{
+        width: 100%;
+    }
+}
